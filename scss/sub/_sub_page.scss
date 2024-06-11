@@ -1,0 +1,416 @@
+#header_sub {
+	width: 100%;
+	.header_inner {
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		.btncall {
+			position: absolute;
+			top: 40px;
+			right: 40px;
+			width: 20px;
+			height: 20px;
+			display: none;
+			z-index: 9999;
+			position: fixed;
+			&::before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 2px;
+				background-color: #000;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				transition: all 0.5s;
+			}
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 2px;
+				background-color: #000;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				transition: all 0.5s;
+			}
+			span {
+				position: absolute;
+				text-indent: -9999999px;
+				display: block;
+				width: 100%;
+				height: 2px;
+				background-color: #000;
+				top: 50%;
+				margin-top: -1px;
+				transition: all 1s;
+			}
+			&.on {
+				&::before {
+					transform: translateY(15px) rotate(45deg);
+					transform-origin: center;
+				}
+				&::after {
+					transform: translateY(-15px) rotate(-45deg);
+					transform-origin: center;
+				}
+				span {
+					opacity: 0;
+				}
+			}
+		}
+		.menu_mobile {
+			width: 250px;
+			height: 100vh;
+			background-color: #b8b9b3;
+			opacity: 0.9;
+			position: fixed;
+			top: 0px;
+			left: -250px;
+			z-index: 100;
+			padding: 35px 30px;
+			transition: all 0.5s;
+			display: none;
+			h2 {
+				width: 162px;
+				height: 104px;
+				margin: 0 auto;
+				a {
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+				span {
+					display: block;
+					font: 20px/1 'SungDongMyungjo';
+					color: #777;
+					text-align: center;
+					margin: 20px;
+				}
+			}
+			ul {
+				margin-top: 80px;
+				li {
+					a {
+						display: block;
+						margin: 30px;
+						font: bold 20px/1 'SungDongMyungjo';
+						color: #ffffff;
+						letter-spacing: 2px;
+						text-align: center;
+					}
+				}
+			}
+			&.on {
+				left: 0px;
+			}
+		}
+		#header_top {
+			width: 100%;
+			height: 100px;
+			padding: 15px 150px 15px 150px;
+			position: absolute;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			z-index: 5;
+			transition: all 0.5s;
+			background: transparent;
+			&.on {
+				width: 100%;
+				height: 100px;
+				position: fixed;
+				top: 0px;
+				z-index: 90;
+				background: #fff;
+				padding: 15px 150px 15px 150px;
+				.header_menu {
+					a {
+						font-weight: bold;
+						color: #425549;
+						&::before {
+							content: '';
+							background: #425549;
+							bottom: -4px;
+							width: 100%;
+							height: 2px;
+							position: absolute;
+							bottom: -50%;
+							left: 0px;
+							transform: translateX(-50%);
+							transition: all 0.5s;
+							opacity: 0;
+						}
+					}
+				}
+			}
+			h1 {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				a {
+					display: block;
+					width: 81px;
+					height: 52px;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+			.header_menu {
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				gap: 100px;
+				ul {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 300px;
+
+					li {
+						a {
+							font: 500 15px/1 'GowunBatang-Regular', 'SungDongMyungjo', 'arial';
+							color: #fff;
+							letter-spacing: 3px;
+							transition: 0.3s;
+							position: relative;
+							transition: all 0.5s;
+							&::before {
+								content: '';
+								background: #e1d8cf;
+								bottom: -4px;
+								width: 100%;
+								height: 2px;
+								position: absolute;
+								bottom: -50%;
+								left: 0px;
+								transform: translateX(-50%);
+								transition: all 0.5s;
+								opacity: 0;
+							}
+							&:hover {
+								&::before {
+									transform: translateX(0%);
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.content {
+	width: 100%;
+	padding: 0 0 150px;
+	.sub_visual {
+		width: 100%;
+		height: 250px;
+		background-color: #aaa;
+		margin-bottom: 100px;
+	}
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		min-height: 500px;
+		// background-color: #666;
+		h2 {
+			font: normal 50px/1 'arial';
+			color: #000;
+			margin-bottom: 60px;
+			span {
+				font: normal 20px/1 '맑은 고딕';
+				color: #aaa;
+				&::before {
+					content: '/';
+					margin-left: 10px;
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+#footer_sub {
+	width: 100%;
+	padding: 0px auto;
+	background-color: #535353;
+	padding: 30px 50px 20px 50px;
+	margin: 100px 0 0 0;
+	.ft_menu {
+		width: 1180px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		h2 {
+			a {
+				display: block;
+				font: bold 40px/1 'Italiana';
+				color: #eee;
+				letter-spacing: 2px;
+				float: left;
+			}
+		}
+		p {
+			font: 15px/1 'Pretendard-Regular';
+			color: #999;
+			float: left;
+		}
+		.inner_right {
+			float: right;
+			li {
+				float: left;
+				margin-left: 20px;
+				a {
+					font: 15px/1px 'Pretendard-Regular';
+					color: #999;
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.ft_contents {
+		width: 1180px;
+		margin: 0 auto 20px;
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		ul {
+			li {
+				font: 15px/1 'Pretendard-Regular';
+				color: #999;
+				span {
+					font: 15px/1.8 'Pretendard-Regular';
+					&::after {
+						content: '|';
+						padding: 0 3px 0 8px;
+						color: #999;
+					}
+					&:last-child {
+						&::after {
+							content: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	.sns {
+		width: 1180px;
+		margin: 0 auto;
+		// margin-bottom: 30px;
+		border-top: 1px solid #777;
+		padding-top: 20px;
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		ul {
+			float: right;
+			li {
+				float: left;
+				margin-left: 20px;
+				a {
+					font: 20px/1 'Pretendard-Regular';
+					color: #ddd;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#header_sub {
+		.header_inner {
+			width: 100%;
+			.btncall {
+				display: block;
+			}
+			.menu_mobile {
+				display: block;
+			}
+			#header_top {
+				width: 100%;
+				.header_menu {
+					display: none;
+				}
+			}
+		}
+	}
+	#footer_sub {
+		margin: 0px;
+		width: 100%;
+		margin: 0px;
+		position: relative;
+		.ft_menu {
+			width: 100%;
+			h2 {
+				a {
+					display: block;
+					width: 100%;
+					text-align: center;
+				}
+			}
+			.inner_right {
+				width: 100%;
+				margin: 40px auto 20px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				li {
+					a {
+						// display: block;
+						// width: 100%;
+						display: block;
+						width: 100%;
+						text-align: center;
+					}
+				}
+			}
+		}
+		.ft_contents {
+			width: 100%;
+			ul {
+				li {
+					span {
+						display: block;
+						width: 100%;
+						text-align: center;
+						line-height: 30px;
+						&::after {
+							display: none;
+						}
+					}
+					br {
+						display: none;
+					}
+				}
+			}
+		}
+		.sns {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+}

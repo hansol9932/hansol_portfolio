@@ -1,0 +1,227 @@
+.tab {
+	width: 100%;
+	.sub_login_header {
+		width: 100%;
+		height: 500px;
+		background-image: url(../img/sub/3-3.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.login {
+		text-align: center;
+		font: 600 20px/1 'Italiana', 'arial';
+		color: #333;
+		letter-spacing: 1.5px;
+		margin: 150px auto 50px;
+	}
+	.sub_login_inner {
+		margin: 0px auto 50px;
+		ul {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			li {
+				&.active {
+					a {
+						font-weight: 600;
+						color: #970000;
+					}
+				}
+
+				a {
+					font: 15px/1 'Pretendard-Regular', '맑은 고딕';
+					color: #333;
+
+					&:hover {
+						text-decoration: underline #999;
+						text-underline-position: under;
+						text-underline-offset: 3px;
+					}
+				}
+			}
+		}
+	}
+	.conBox {
+		width: 100%;
+
+		display: none;
+
+		&.active_tab {
+			display: block;
+			min-height: auto;
+		}
+		.loginwrap {
+			width: 500px;
+			height: 350px;
+			padding: 40px;
+			margin: 0 auto;
+			form {
+				input {
+					width: 100%;
+					height: 50px;
+					padding: 0 10px;
+					box-sizing: border-box;
+					margin-bottom: 10px;
+					border-radius: 6px;
+					border: 1px solid #999;
+					border-radius: 5px;
+					&[type='submit'] {
+						color: #fff;
+						font: 20px/1 'Italiana', 'arial';
+						background-color: #333;
+						margin-top: 20px;
+					}
+				}
+				.checkbox {
+					position: relative;
+					width: 100%;
+					height: 40px;
+					font: 15px/1 'Pretendard-Regular', '맑은 고딕';
+					display: flex;
+					align-items: center;
+					color: #333;
+					background-color: antiquewhite;
+
+					input[type='checkbox'] {
+						position: absolute;
+						top: 50%;
+						left: 10px;
+						transform: translateY(-50%);
+						display: block;
+						padding: 10px;
+						width: 20px;
+						height: 20px;
+						border: 1px solid #999;
+						cursor: pointer;
+						margin-right: 10px;
+					}
+					label {
+						text-indent: 40px;
+						font: 20px/40px '맑은고딕';
+						color: #333;
+					}
+				}
+			}
+		}
+		fieldset {
+			border: none;
+			margin-bottom: 1000px;
+			.inner {
+				width: 1180px;
+				margin: 0 auto;
+				padding: 50px 0px;
+
+				.hidden {
+					position: absolute;
+					top: -99999999px;
+					opacity: 0;
+				}
+				h2 {
+					font: 25px/2 'Pretendard-Regular', '맑은 고딕';
+					color: #333;
+				}
+				span {
+					display: block;
+					font: 15px/1 'Pretendard-Regular', '맑은 고딕';
+					color: #666;
+					margin-bottom: 30px;
+					left: 1px;
+				}
+				.select_txt {
+					margin: 100px 0 20px 0;
+				}
+				table {
+					width: 100%;
+					border-top: 1px solid #999;
+					border-bottom: 1px solid #999;
+
+					tr {
+						border-bottom: 1px solid #eee;
+						th {
+							width: 15%;
+							text-align: left;
+							font: bold 15px/1 'arial';
+							color: #333;
+							padding: 20px 30px;
+						}
+						td {
+							padding: 20px 30px;
+							display: flex;
+							input[type='text'],
+							[type='password'] {
+								width: 50%;
+								height: 40px;
+								border: none;
+								background-color: #f0f0f0;
+								padding-left: 20px;
+							}
+							input[type='text_number'] {
+								width: 15%;
+								height: 40px;
+								border: none;
+								background-color: #f0f0f0;
+								padding-left: 20px;
+								margin-right: 25px;
+							}
+							input[type='checkbox'],
+							[type='radio'] {
+								margin-right: 10px;
+							}
+							label {
+								margin-right: 10px;
+							}
+						}
+					}
+				}
+				input[type='reset'],
+				[type='submit'] {
+					width: 150px;
+					height: 40px;
+					border: none;
+					margin: 100px 0 150px 0;
+					position: relative;
+					left: 50%;
+					transform: translateX(-150px);
+					color: #fff;
+					font: 15px/1 'Pretendard-Regular', '맑은 고딕';
+					background-color: #333;
+					margin-top: 50px;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+		.tab {
+			margin-bottom: 300px;
+			.conBox {
+				height: 100%;
+				ul {
+					li {
+						flex-direction: column;
+						gap: 180px;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.tab {
+			.sub_product_visual_inner {
+				ul {
+					gap: 15px;
+					li {
+						&::after {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

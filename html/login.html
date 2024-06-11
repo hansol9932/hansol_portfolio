@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>login</title>
+		<link rel="stylesheet" href="../css/style.css" />
+		<script src="../script/jquery-3.5.1.min.js"></script>
+		<script defer src="../script/common.js"></script>
+		<script defer src="../script/sub.js"></script>
+		<script
+			src="https://kit.fontawesome.com/c12878d3ba.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<header id="header_sub">
+			<div class="header_inner">
+				<a href="#" class="btncall">
+					<span>메뉴호출</span>
+				</a>
+				<div class="menu_mobile">
+					<h2>
+						<a href="../index.html">
+							<img src="../img/logo(w).png" alt="모스오리진 로고" />
+							<span>moss menu list</span>
+						</a>
+					</h2>
+					<ul id="header_menu_mobile">
+						<li><a href="../html/product.html">PRODUCT</a></li>
+						<li><a href="../html/about.html">ABOUT</a></li>
+						<li><a href="../html/login.html">LOGIN</a></li>
+						<li><a href="../html/q&a.html">FAQ</a></li>
+					</ul>
+				</div>
+				<div id="header_top">
+					<h1>
+						<a href="../index.html"
+							><img src="../img/logo(w).png" alt="모스오리진 로고"
+						/></a>
+					</h1>
+					<div class="header_menu">
+						<ul class="header_left">
+							<li><a href="./product.html">PRODUCT</a></li>
+							<li><a href="./about.html">ABOUT</a></li>
+						</ul>
+						<ul class="header_right">
+							<li><a href="./login.html">LOGIN</a></li>
+							<li><a href="./q&a.html">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="sub_login tab">
+			<div class="sub_login_header"></div>
+			<h2 class="login">LOGIN</h2>
+			<div class="sub_login_inner">
+				<ul>
+					<li data-tab="cont1" class="active">
+						<a href="#">로그인</a>
+					</li>
+					<li data-tab="cont2">
+						<a href="#">회원가입</a>
+					</li>
+				</ul>
+			</div>
+			<div id="cont1" class="conBox active">
+				<div class="loginwrap">
+					<form method="post" action="서버의url" id="login-form">
+						<input
+							type="text"
+							name="userName"
+							placeholder="아이디를 입력하세요"
+						/>
+						<input
+							type="password"
+							name="userPassword"
+							placeholder="비밀번호를 입력하세요"
+						/>
+						<div class="checkbox">
+							<input type="checkbox" id="remember-check" />
+							<label for="remember-check">아이디 저장하기</label>
+						</div>
+						<div class="submit">
+							<input type="submit" value="Login" />
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="cont2" class="conBox">
+				<fieldset>
+					<div class="inner">
+						<legend class="hidden">회원가입 양식폼</legend>
+						<h2>필수입력 정보</h2>
+						<span>필수양식이므로 반드시 입력해주시길 바랍니다</span>
+						<table>
+							<caption class="hidden">
+								회원정보 입력양식 테이블
+							</caption>
+							<tr>
+								<th scope="row"><label for="username">이름</label></th>
+								<td>
+									<input
+										type="text"
+										name="name"
+										id="username"
+										placeholder="이름을 입력해주세요"
+										required
+									/>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="userid">아이디</label></th>
+								<td>
+									<input
+										type="text"
+										name="id"
+										id="userid"
+										placeholder="아이디를 입력해주세요"
+										required
+									/>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">
+									<label for="pwd1">비밀번호</label>
+								</th>
+								<td>
+									<input
+										type="password"
+										name="pwd"
+										id="pwd1"
+										placeholder="비밀번호를 입력해주세요"
+										required
+									/>
+									<div id="toggleBtn"></div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="pwd2">비밀번호 확인</label></th>
+								<td>
+									<input
+										type="password"
+										name="re-pwd"
+										id="pwd2"
+										placeholder="비밀번호를 한번 더 입력해주세요"
+										required
+									/>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="Number">휴대폰번호</label></th>
+								<td>
+									<input
+										type="text_number"
+										name="phonnumber"
+										id="Number"
+										required
+									/>
+									<input
+										type="text_number"
+										name="phonnumber"
+										id="Number"
+										required
+									/>
+									<input
+										type="text_number"
+										name="phonnumber"
+										id="Number"
+										required
+									/>
+								</td>
+							</tr>
+						</table>
+						<h2 class="select_txt">선택 입력 정보</h2>
+						<table>
+							<tr>
+								<th scope="row">인입경로</th>
+								<td>
+									<label for="friend">
+										<input
+											type="checkbox"
+											name="path"
+											id="friend"
+											value="friend"
+										/>
+										친구
+									</label>
+									<label for="family">
+										<input
+											type="checkbox"
+											name="path"
+											id="family"
+											value="family"
+										/>
+										가족
+									</label>
+									<label for="sns">
+										<input type="checkbox" name="path" id="sns" value="sns" />
+										SNS
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">성별</th>
+								<td>
+									<label for="male">
+										<input type="radio" name="gender" id="male" value="male" />
+										여성
+									</label>
+									<label for="female">
+										<input
+											type="radio"
+											name="gender"
+											id="female"
+											value="female"
+										/>
+										남성
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><label for="email">E-MAIL</label></th>
+								<td>
+									<input
+										type="text"
+										name="email"
+										id="email"
+										placeholder="이메일 주소를 @포함해서 작성해 주세요"
+									/>
+									<select name="email_company" id="email_company">
+										<option value="">선택하세요</option>
+										<option value="naver">naver.com</option>
+										<option value="daum">daum.net</option>
+										<option value="google">gmail.com</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+						<tr>
+							<th colspan="2">
+								<input type="reset" value="취소" />
+								<input type="submit" value="회원가입" />
+							</th>
+						</tr>
+					</div>
+				</fieldset>
+			</div>
+		</section>
+
+		<footer id="footer_sub">
+			<div class="ft_menu">
+				<h2>
+					<a href="./index.html"> MOSS ORIGIN </a>
+				</h2>
+				<ul class="inner_right">
+					<li>
+						<a href="#">홈</a>
+					</li>
+					<li>
+						<a href="#">회사소개</a>
+					</li>
+					<li>
+						<a href="#">이용약관</a>
+					</li>
+					<li>
+						<a href="#">이용안내</a>
+					</li>
+					<li>
+						<a href="#">개인정보처리방침</a>
+					</li>
+				</ul>
+			</div>
+			<div class="ft_contents">
+				<ul>
+					<li>
+						<span>CEO : 김효진</span>
+						<span>주소 : 06018서울 강남구 신사동 663,4층</span>
+						<br />
+						<span>E-Commerce Permit 제2022-서울성동-01656호</span>
+						<span>계좌정보 655-034144-04-019(기업은행)</span>
+						<br />
+						<span>제휴&마케팅문의 mkt@mossorigin.com</span>
+						<span>Business Number : 717-87-02354</span>
+					</li>
+				</ul>
+			</div>
+			<div class="sns">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="fa-brands fa-instagram"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa-brands fa-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa-regular fa-envelope"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>

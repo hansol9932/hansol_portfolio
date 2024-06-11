@@ -1,0 +1,113 @@
+#perfume {
+	width: 100%;
+	background: linear-gradient(180deg, #f3eee7, #fff);
+	margin-bottom: 150px;
+	h2 {
+		text-align: center;
+		font: 500 60px/1 'Italiana', 'arial';
+		letter-spacing: 2px;
+		color: #3b4636;
+		transform: translateY(50%);
+		opacity: 0;
+		transition: all 0.8s;
+	}
+	.perfume_txt {
+		text-align: center;
+		color: #000000;
+		font: 16px 'Pretendard-Regular', '맑은 고딕';
+		opacity: 0.5;
+		letter-spacing: 2px;
+		padding: 50px;
+		transform: translateY(50%);
+		opacity: 0;
+		transition: all 1s;
+	}
+	.wrap {
+		width: 1180px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		margin: 0 auto;
+
+		article {
+			width: 380px;
+			height: 700px;
+			border-radius: 10px;
+			overflow: hidden;
+
+			opacity: 0;
+			transform: translateY(50%);
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			p {
+				position: relative;
+				top: -60%;
+				left: 35%;
+				font: 500 20px/1.2 'Pretendard-Regular', '맑은 고딕';
+				color: #ffffffa9;
+				letter-spacing: 1px;
+			}
+			span {
+				display: block;
+				position: relative;
+				top: -20%;
+				left: 50%;
+				transform: translateX(-50%);
+				text-align: center;
+				font: 500 20px/1.5 'Pretendard-Regular', '맑은 고딕';
+				color: #fff;
+			}
+			&:nth-of-type(1) {
+				transition: all 1.3s;
+			}
+			&:nth-of-type(2) {
+				transition: all 1.7s;
+			}
+			&:nth-of-type(3) {
+				transition: all 2.1s;
+			}
+		}
+	}
+	&.auto {
+		h2 {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+		.perfume_txt {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+		.wrap {
+			article {
+				transform: translateY(0px);
+				opacity: 1;
+			}
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	#perfume {
+		.wrap {
+			width: 100%;
+			flex-direction: column;
+			gap: 10px;
+
+			article {
+				width: 85vw;
+				height: 25vh;
+				p {
+					top: -65%;
+					left: 15%;
+				}
+				span {
+					top: -85%;
+					left: 75%;
+				}
+			}
+		}
+	}
+}
