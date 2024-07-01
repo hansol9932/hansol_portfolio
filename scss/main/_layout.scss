@@ -65,9 +65,10 @@
 			display: block;
 			width: 1px;
 			height: 100px;
-			background-color: #49663c;
+			background-color: #49663c91;
 			position: absolute;
 			left: 50%;
+			z-index: 1;
 		}
 	}
 	span {
@@ -110,6 +111,35 @@
 			.front {
 				width: 70%;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 428px) {
+	#layout {
+		padding: 300px 0 150px 0;
+		h2 {
+			font-size: 70px;
+			top: 90px;
+		}
+		.layout_Bg {
+			.back {
+				height: 500px;
+			}
+			.front {
+				width: 70%;
+				height: 350px;
+				top: 280px;
+			}
+		}
+		h3 {
+			font-size: 40px;
+		}
+		p {
+			font-size: 13px;
+		}
+		span {
+			font-size: 14px;
 		}
 	}
 }

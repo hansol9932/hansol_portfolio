@@ -111,3 +111,24 @@
 		}
 	}
 }
+
+@media screen and (max-width: 428px) {
+	#perfume {
+		h2 {
+			font-size: 40px;
+		}
+		.perfume_txt {
+			font-size: 13px;
+		}
+		.wrap {
+			article {
+				p {
+					font-size: 15px;
+				}
+				span {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}

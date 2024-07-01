@@ -48,9 +48,41 @@
 }
 
 @media screen and (max-width: 700px) {
-	.product_slide {
+	#event_slide {
 		.slide1 {
-			margin: 200px auto 0;
+			height: 400px;
+			.swiper-wrapper {
+				.swiper-slide {
+					.txt_slide {
+						h3 {
+							font-size: 22px;
+						}
+						span {
+							font-size: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 428px) {
+	#event_slide {
+		.slide1 {
+			height: 200px;
+			.swiper-wrapper {
+				.swiper-slide {
+					.txt_slide {
+						h3 {
+							font-size: 13px;
+						}
+						span {
+							font-size: 9px;
+						}
+					}
+				}
+			}
 		}
 	}
 }

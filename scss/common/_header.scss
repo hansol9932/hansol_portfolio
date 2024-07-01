@@ -291,74 +291,7 @@
 					color: #fff;
 					border-radius: 30px;
 				}
-				// .inner_video      {
-				// 	width: 67%;
-				// 	height: 50%;
-				// 	object-fit: cover;
-				// 	position: abs olute;
-				// 	top: 50%;
-				// 	left: 50%;
-				// 	transform: translate(-50%, -50%);
-				// 	border-top-left-radius: 80px;
-				// 	border-bottom-right-radius: 80px;
-				// 	overflow: hidden;
-				// 	box-shadow: 0px 0px 50px 10px #4a594e;
-				// 	// border: 100px opacify($color: #ffffff, $amount: 1);
-				// 	z-index: 3;
-				// }
-				// .main_moss_left {
-				// 	font: italic 130px/1 'SungDongMyungjo';
-				// 	color: #bec5a5;
-				// 	position: absolute;
-				// 	top: 16%;
-				// 	left: 5%;
-				// 	opacity: 0.3;
-				// 	letter-spacing: 7px;
-				// }
-				// .main_moss_right {
-				// 	font: italic 130px/1 'SungDongMyungjo';
-				// 	color: #bec5a5;
-				// 	position: absolute;
-				// 	bottom: 13%;
-				// 	right: 5%;
-				// 	opacity: 0.3;
-				// 	letter-spacing: 7px;
-				// }
-				// position: relative;
-				// min-width: 1180px;
-				// height: 800px;
-				// background-image: url(../img/header_img/숲\(흑백ver\).jpg);
-				// background-repeat: no-repeat;
-				// background-position: center;
-				// background-size: cover;
-
-				// &::after {
-				// 	content: '';
-				// 	display: block;
-				// 	min-width: 1180px;
-				// 	height: 800px;
-				// 	border-radius: 600px 600px 0 0;
-				// 	background-color: antiquewhite;
-				// 	background-image: url(../img/header_img/숲\(컬러ver\).jpg);
-				// 	background-repeat: no-repeat;
-				// 	background-position: center;
-				// 	background-size: cover;
-				// 	background-attachment: fixed;
-
-				// filter: blur(5px);
 			}
-			// .txt {
-			// 	position: absolute;
-			// 	top: 90%;
-			// 	left: 50%;
-			// 	transform: translatex(-50%);
-			// 	p {
-			// 		font: 18px/1 'GowunBatang-Regular', '맑은 고딕';
-			// 		letter-spacing: 5px;
-			// 		color: #ebebe3;
-			// 		text-shadow: 2px 2px 2px rgb(163, 163, 163);
-			// 	}
-			// }
 		}
 	}
 }
@@ -385,6 +318,61 @@
 				}
 				.swiper-button-next {
 					margin-right: 30px;
+				}
+			}
+			.txt {
+				p {
+					font: 13px/1 'GowunBatang-Regular', '맑은 고딕';
+					letter-spacing: 3px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 428px) {
+	#header {
+		.header_inner {
+			width: 100%;
+			.btncall {
+				display: block;
+			}
+			.menu_mobile {
+				display: block;
+			}
+			#header_top {
+				width: 100%;
+				.header_menu {
+					display: none;
+				}
+			}
+			.header_Bg {
+				width: 100%;
+				.slide_header {
+					.swiper-wrapper {
+						img {
+							height: 824px;
+						}
+					}
+					.swiper-button-prev {
+						margin-left: 30px;
+					}
+					.swiper-button-next {
+						margin-right: 30px;
+					}
+					h2 {
+						font: 550 35px/1.2 'Pretendard-Regular';
+						letter-spacing: 0.5px;
+						top: 70%;
+						p {
+							font: 300 15px/3 'Pretendard-Regular';
+						}
+						a {
+							width: 80px;
+							height: 30px;
+							font: 300 10px/30px 'Pretendard-Regular';
+						}
+					}
 				}
 			}
 			.txt {

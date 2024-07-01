@@ -150,3 +150,38 @@
 		}
 	}
 }
+
+@media screen and (max-width: 428px) {
+	#footer {
+		.ft_menu {
+			h2 {
+				a {
+					font: bold 30px/1 'Italiana';
+				}
+			}
+			p {
+				font: 10px/1 'Pretendard-Regular';
+			}
+			.inner_right {
+				li {
+					a {
+						font: 12px/1px 'Pretendard-Regular';
+					}
+				}
+			}
+		}
+		.ft_contents {
+			width: 100%;
+			ul {
+				li {
+					span {
+						font: 13px/2 'Pretendard-Regular';
+					}
+					br {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

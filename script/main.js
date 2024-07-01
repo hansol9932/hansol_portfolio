@@ -6,7 +6,6 @@ let offset = $('#header_top').offset();
 console.log(offset.top);
 
 $(window).scroll(function () {
-	// console.log($(document).scrollTop());
 	if ($(document).scrollTop() > offset.top) {
 		$('#header_top').addClass('on');
 		$('#header_top img').attr('src', './img/logo(green).png');
@@ -66,6 +65,3 @@ nextBtn.addEventListener('click', (e) => {
 		);
 	}
 });
-
-// map 중요! : 특정 행동을 반복적으로 처리하도록 도와주는 친구
-//

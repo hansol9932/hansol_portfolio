@@ -1,6 +1,8 @@
 #instargram {
 	margin: 300px 0 0 0;
 	width: 100%;
+	height: 800px;
+	position: relative;
 	h2 {
 		text-align: center;
 		font: 600 25px/2 'Italiana', 'arial';
@@ -26,6 +28,17 @@
 			}
 		}
 	}
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 50px;
+		left: 0px;
+		z-index: 100;
+		background-color: rgba(255, 255, 255, 0);
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -40,6 +53,23 @@
 					height: 100%;
 				}
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 428px) {
+	#instargram {
+		height: 300px;
+		margin: 100px 0 50px 0;
+		h2 {
+			font: 600 10px/1 'Italiana', 'arial';
+			margin-bottom: 20px;
+		}
+		p {
+			font: 600 13px/2 'Italiana', 'arial';
+		}
+		.swiper-wrapper {
+			margin-top: 0px;
 		}
 	}
 }

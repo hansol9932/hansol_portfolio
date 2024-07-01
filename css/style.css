@@ -319,6 +319,52 @@ body {
     letter-spacing: 3px;
   }
 }
+@media screen and (max-width: 428px) {
+  #header .header_inner {
+    width: 100%;
+  }
+  #header .header_inner .btncall {
+    display: block;
+  }
+  #header .header_inner .menu_mobile {
+    display: block;
+  }
+  #header .header_inner #header_top {
+    width: 100%;
+  }
+  #header .header_inner #header_top .header_menu {
+    display: none;
+  }
+  #header .header_inner .header_Bg {
+    width: 100%;
+  }
+  #header .header_inner .header_Bg .slide_header .swiper-wrapper img {
+    height: 824px;
+  }
+  #header .header_inner .header_Bg .slide_header .swiper-button-prev {
+    margin-left: 30px;
+  }
+  #header .header_inner .header_Bg .slide_header .swiper-button-next {
+    margin-right: 30px;
+  }
+  #header .header_inner .header_Bg .slide_header h2 {
+    font: 550 35px/1.2 "Pretendard-Regular";
+    letter-spacing: 0.5px;
+    top: 70%;
+  }
+  #header .header_inner .header_Bg .slide_header h2 p {
+    font: 300 15px/3 "Pretendard-Regular";
+  }
+  #header .header_inner .header_Bg .slide_header h2 a {
+    width: 80px;
+    height: 30px;
+    font: 300 10px/30px "Pretendard-Regular";
+  }
+  #header .header_inner .txt p {
+    font: 13px/1 "GowunBatang-Regular", "맑은 고딕";
+    letter-spacing: 3px;
+  }
+}
 #footer {
   width: 100%;
   padding: 0px auto;
@@ -455,6 +501,26 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
+  }
+}
+@media screen and (max-width: 428px) {
+  #footer .ft_menu h2 a {
+    font: bold 30px/1 "Italiana";
+  }
+  #footer .ft_menu p {
+    font: 10px/1 "Pretendard-Regular";
+  }
+  #footer .ft_menu .inner_right li a {
+    font: 12px/1px "Pretendard-Regular";
+  }
+  #footer .ft_contents {
+    width: 100%;
+  }
+  #footer .ft_contents ul li span {
+    font: 13px/2 "Pretendard-Regular";
+  }
+  #footer .ft_contents ul li br {
+    display: none;
   }
 }
 #category {
@@ -618,9 +684,10 @@ body {
   display: block;
   width: 1px;
   height: 100px;
-  background-color: #49663c;
+  background-color: rgba(73, 102, 60, 0.568627451);
   position: absolute;
   left: 50%;
+  z-index: 1;
 }
 #layout span {
   display: block;
@@ -654,6 +721,32 @@ body {
   }
   #layout .layout_Bg .front {
     width: 70%;
+  }
+}
+@media screen and (max-width: 428px) {
+  #layout {
+    padding: 300px 0 150px 0;
+  }
+  #layout h2 {
+    font-size: 70px;
+    top: 90px;
+  }
+  #layout .layout_Bg .back {
+    height: 500px;
+  }
+  #layout .layout_Bg .front {
+    width: 70%;
+    height: 350px;
+    top: 280px;
+  }
+  #layout h3 {
+    font-size: 40px;
+  }
+  #layout p {
+    font-size: 13px;
+  }
+  #layout span {
+    font-size: 14px;
   }
 }
 #perfume {
@@ -761,6 +854,20 @@ body {
     left: 75%;
   }
 }
+@media screen and (max-width: 428px) {
+  #perfume h2 {
+    font-size: 40px;
+  }
+  #perfume .perfume_txt {
+    font-size: 13px;
+  }
+  #perfume .wrap article p {
+    font-size: 15px;
+  }
+  #perfume .wrap article span {
+    font-size: 18px;
+  }
+}
 #event_slide .slide1 {
   width: 100%;
   height: 500px;
@@ -803,8 +910,25 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  .product_slide .slide1 {
-    margin: 200px auto 0;
+  #event_slide .slide1 {
+    height: 400px;
+  }
+  #event_slide .slide1 .swiper-wrapper .swiper-slide .txt_slide h3 {
+    font-size: 22px;
+  }
+  #event_slide .slide1 .swiper-wrapper .swiper-slide .txt_slide span {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 428px) {
+  #event_slide .slide1 {
+    height: 200px;
+  }
+  #event_slide .slide1 .swiper-wrapper .swiper-slide .txt_slide h3 {
+    font-size: 13px;
+  }
+  #event_slide .slide1 .swiper-wrapper .swiper-slide .txt_slide span {
+    font-size: 9px;
   }
 }
 #allProduct {
@@ -972,6 +1096,8 @@ body {
 #instargram {
   margin: 300px 0 0 0;
   width: 100%;
+  height: 800px;
+  position: relative;
 }
 #instargram h2 {
   text-align: center;
@@ -998,6 +1124,17 @@ body {
   height: 350px;
   object-fit: cover;
 }
+#instargram::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0);
+}
 
 @media screen and (max-width: 700px) {
   #instargram {
@@ -1012,6 +1149,22 @@ body {
   #instargram .swiper-wrapper .swiper-slide img {
     width: 100%;
     height: 100%;
+  }
+}
+@media screen and (max-width: 428px) {
+  #instargram {
+    height: 300px;
+    margin: 100px 0 50px 0;
+  }
+  #instargram h2 {
+    font: 600 10px/1 "Italiana", "arial";
+    margin-bottom: 20px;
+  }
+  #instargram p {
+    font: 600 13px/2 "Italiana", "arial";
+  }
+  #instargram .swiper-wrapper {
+    margin-top: 0px;
   }
 }
 #header_sub {
@@ -1041,7 +1194,7 @@ body {
   position: absolute;
   top: 0px;
   left: 0px;
-  transition: all 0.5s;
+  transition: all 0.5s, transform 0.5s 0.5s;
 }
 #header_sub .header_inner .btncall::after {
   content: "";
@@ -1052,7 +1205,7 @@ body {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  transition: all 0.5s;
+  transition: all 0.5s, transform 0.5s 0.5s;
 }
 #header_sub .header_inner .btncall span {
   position: absolute;
@@ -1066,12 +1219,16 @@ body {
   transition: all 1s;
 }
 #header_sub .header_inner .btncall.on::before {
-  transform: translateY(15px) rotate(45deg);
-  transform-origin: center;
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+  transform-origin: center center;
 }
 #header_sub .header_inner .btncall.on::after {
-  transform: translateY(-15px) rotate(-45deg);
-  transform-origin: center;
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+  transform-origin: center center;
 }
 #header_sub .header_inner .btncall.on span {
   opacity: 0;
@@ -1397,6 +1554,26 @@ body {
     text-align: center;
   }
 }
+@media screen and (max-width: 428px) {
+  #footer_sub .ft_menu h2 a {
+    font: bold 30px/1 "Italiana";
+  }
+  #footer_sub .ft_menu p {
+    font: 10px/1 "Pretendard-Regular";
+  }
+  #footer_sub .ft_menu .inner_right li a {
+    font: 12px/1px "Pretendard-Regular";
+  }
+  #footer_sub .ft_contents {
+    width: 100%;
+  }
+  #footer_sub .ft_contents ul li span {
+    font: 13px/2 "Pretendard-Regular";
+  }
+  #footer_sub .ft_contents ul li br {
+    display: none;
+  }
+}
 .sub_about_bg {
   width: 100%;
 }
@@ -1422,8 +1599,8 @@ body {
   content: "";
   display: block;
   width: 1px;
-  height: 350px;
-  background-color: #fff;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.4392156863);
   position: relative;
   bottom: -100px;
   left: 50%;
@@ -1594,7 +1771,6 @@ body {
   display: flex;
   align-items: center;
   color: #333;
-  background-color: antiquewhite;
 }
 .tab .conBox .loginwrap form .checkbox input[type=checkbox] {
   position: absolute;
@@ -1611,8 +1787,8 @@ body {
 }
 .tab .conBox .loginwrap form .checkbox label {
   text-indent: 40px;
-  font: 20px/40px "맑은고딕";
-  color: #333;
+  font: 13px/40px "맑은고딕";
+  color: #555;
 }
 .tab .conBox fieldset {
   border: none;
